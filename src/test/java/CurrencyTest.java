@@ -1,4 +1,5 @@
 import MyCurrency.Dollar;
+import MyCurrency.Franc;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -18,5 +19,12 @@ public class CurrencyTest {
 
         Dollar dollar3 = new Dollar(6);
         Assert.assertFalse(dollar1.equals(dollar3));
+    }
+
+    @Test
+    public void test_FranceMultiplication() {
+        Franc dollar = new Franc(5);
+        Assert.assertEquals(new Franc(10), dollar.times(2));
+        Assert.assertEquals(new Franc(15), dollar.times(3));
     }
 }
