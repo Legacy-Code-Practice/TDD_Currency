@@ -14,4 +14,9 @@ public class Dollar {
     public void times(double m) {
         this.amount = this.amount * m;
     }
+
+    public boolean equals(Object o) {
+        Dollar d = (Dollar) o;
+        return this.amount == d.amount;
+    }
 }
