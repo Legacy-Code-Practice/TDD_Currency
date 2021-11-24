@@ -9,6 +9,7 @@ public class Money {
 
     public boolean equals(Object o) {
         Money d = (Money) o;
-        return this.amount == d.amount;
+        return this.amount == d.amount
+                && getClass().equals(d.getClass());
     }
 }
