@@ -6,8 +6,8 @@ public class CurrencyTest {
     @Test
     public void test_Currency_Multiplication() {
         Dollar dollar = new Dollar(5);
-        dollar.times(2);
-        Assert.assertEquals(10, dollar.getAmount(), 2);
+        Assert.assertEquals(new Dollar(10), dollar.times(2));
+        Assert.assertEquals(new Dollar(15), dollar.times(3));
     }
 
     @Test
