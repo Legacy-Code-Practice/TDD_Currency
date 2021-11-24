@@ -13,12 +13,10 @@ public class CurrencyTest {
 
     @Test
     public void testEquality() {
-        Dollar dollar1 = new Dollar(5);
-        Dollar dollar2 = new Dollar(5);
-        Assert.assertTrue(dollar1.equals(dollar2));
-
-        Dollar dollar3 = new Dollar(6);
-        Assert.assertFalse(dollar1.equals(dollar3));
+        Assert.assertEquals(new Dollar(5), new Dollar(5));
+        Assert.assertNotEquals(new Dollar(5), new Dollar(6));
+        Assert.assertEquals(new Franc(5), new Franc(5));
+        Assert.assertNotEquals(new Franc(5), new Franc(6));
     }
 
     @Test

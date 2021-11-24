@@ -1,18 +1,11 @@
 package MyCurrency;
 
-public class Franc {
-    private final double amount;
-
+public class Franc extends Money {
     public Franc(double amount) {
-        this.amount = amount;
+        super(amount);
     }
 
     public Franc times(double m) {
         return new Franc(this.amount * m);
-    }
-
-    public boolean equals(Object o) {
-        Franc d = (Franc) o;
-        return this.amount == d.amount;
     }
 }
