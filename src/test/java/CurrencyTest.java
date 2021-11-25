@@ -1,30 +1,29 @@
-import MyCurrency.Dollar;
-import MyCurrency.Franc;
+import MyCurrency.Money;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class CurrencyTest {
     @Test
     public void test_Currency_Multiplication() {
-        Dollar dollar = new Dollar(5);
-        Assert.assertEquals(new Dollar(10), dollar.times(2));
-        Assert.assertEquals(new Dollar(15), dollar.times(3));
+        Money dollar = Money.dollar(5);
+        Assert.assertEquals(Money.dollar(10), dollar.times(2));
+        Assert.assertEquals(Money.dollar(15), dollar.times(3));
     }
 
     @Test
     public void testEquality() {
-        Assert.assertEquals(new Dollar(5), new Dollar(5));
-        Assert.assertNotEquals(new Dollar(5), new Dollar(6));
-        Assert.assertEquals(new Franc(5), new Franc(5));
-        Assert.assertNotEquals(new Franc(5), new Franc(6));
-        Assert.assertNotEquals(new Franc(5), new Dollar(6));
-        Assert.assertNotEquals(new Franc(5), new Dollar(5));
+        Assert.assertEquals(Money.dollar(5), Money.dollar(5));
+        Assert.assertNotEquals(Money.dollar(5), Money.dollar(6));
+        Assert.assertEquals(Money.franc(5), Money.franc(5));
+        Assert.assertNotEquals(Money.franc(5), Money.franc(6));
+        Assert.assertNotEquals(Money.franc(5), Money.dollar(6));
+        Assert.assertNotEquals(Money.franc(5), Money.dollar(5));
     }
 
     @Test
     public void test_FranceMultiplication() {
-        Franc dollar = new Franc(5);
-        Assert.assertEquals(new Franc(10), dollar.times(2));
-        Assert.assertEquals(new Franc(15), dollar.times(3));
+        Money franc = Money.franc(5);
+        Assert.assertEquals(Money.franc(10), franc.times(2));
+        Assert.assertEquals(Money.franc(15), franc.times(3));
     }
 }
